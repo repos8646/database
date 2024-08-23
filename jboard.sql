@@ -97,3 +97,9 @@ left JOIN `file` AS b ON a.`no`=b.ano
 WHERE `no`='1';
 
 update file set `download` = `download` + 1 where `fno`=2;
+
+SELECT a.*, b.nick from `comment` AS a
+JOIN `user` AS b ON a.writer = b.uid
+where `parent`=16558;
+
+SELECT LAST_INSERT_ID(`no`) FROM `comment`;
